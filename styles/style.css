@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    height: 50vh;
+}
+
+#inside {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    max-width: 334px;
+    max-height: 334px;
+    flex-wrap: wrap;
+    border: 1px solid purple;
+
+}
+
+.grid {
+    min-width: 20px;
+    min-height: 20px;
+    background: orange;
+
+}
+
+.gridColoring {
+    background: blue;
+}
