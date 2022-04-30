@@ -1,33 +1,27 @@
-body{
-    margin: 0;
-}
-
-#main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* #main {
+    margin: auto;
+    height: 500px;
+    width: 960px;
     border: 1px solid red;
-    height: 50vh;
-}
 
-#inside {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    max-width: 334px;
-    max-height: 334px;
-    flex-wrap: wrap;
-    border: 1px solid purple;
+} */
+
+.container {
+    height: 500px;
+    width: 960px;
+    font-size: 0;
+    margin: auto;
 
 }
 
-.grid {
-    min-width: 20px;
-    min-height: 20px;
+.gridSquare {
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
     background: orange;
 
 }
 
-.gridColoring {
+.gridSquareColor {
     background: blue;
 }
