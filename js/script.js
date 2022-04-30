@@ -1,31 +1,48 @@
-let inside = document.querySelector("#inside");
+const container = document.querySelector(".container");
 const resetButton = document.querySelector("#reset");
-let myInput = prompt("Enter number") * 2;
 
-resetButton.addEventListener("click", () => {
-    while(inside.firstChild){
-        inside.removeChild(inside.firstChild);
-    }
-});
+// takes user input from prompt window.
+let myInput = prompt("Enter number");
 
+// Error message if more than allowed or empty.
+if (myInput >= 10000 || myInput == null){
+    alert("Too big dude!");
+}
+
+// Creates rows from user input and adds to container as child element.
 for(let i = 0; i < myInput; i++){
-    let myGrid = document.createElement("div");
-    myGrid.textContent = ".";
-    myGrid.classList.add("grid");
-    inside.appendChild(myGrid);
+    let row = document.createElement("div");
+    container.appendChild(row);
+
+// Fills the row with same amount as input, creating 1x1 ration.
+    for (let j = 0; j < myInput; j++){
+        let squares = document.createElement("div");
+        squares.className = "gridSquare";
+        squares.style.width = `${960 / myInput}px`;
+        squares.style.height = `${500 / myInput}px`;
+        container.appendChild(squares);
+    }
 
 }
-let pageGrid = document.querySelectorAll(".grid");
+
+// grabs .gridSquare class and assign it to variable
+let paintSquares = document.querySelectorAll(".gridSquare");
+
+// runs through each scare and on mouseOver, change class -
+// - to colored square.
 let paint = function(){
-    pageGrid.forEach(function(square){
-        square.addEventListener("mouseover", () =>{
-            square.classList.add("gridColoring");
+    paintSquares.forEach(function(colorSquare){
+        colorSquare.addEventListener("mouseover", () =>{
+            colorSquare.classList.add("gridSquareColor");
         })
     })
 }
 
-if (myInput >= 10000 || myInput == null){
-    alert("Too big dude!");
-}
+// Clears all created divs.
+resetButton.addEventListener("click", () => {
+    while(container.firstChild){
+        container.removeChild(container.firstChild);
+    }
+});
 
 paint();
