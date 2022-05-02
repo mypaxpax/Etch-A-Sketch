@@ -20,7 +20,7 @@ create = (userInput) => {
     for (let j = 0; j < userInput; j++){
         let squares = document.createElement("div");
         squares.className = "gridSquare";
-        squares.style.width = `${960 / userInput}px`;
+        squares.style.width = `${500 / userInput}px`;
         squares.style.height = `${500 / userInput}px`;
         container.appendChild(squares);
         }
