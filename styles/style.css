@@ -29,7 +29,7 @@ body {
 
 .gridSquare {
     display: inline-block;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.041);
     box-sizing: border-box;
     background: white;
 
