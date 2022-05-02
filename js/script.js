@@ -3,8 +3,15 @@ const clearButton = document.querySelector("#clearButton");
 const newGridSize = document.querySelector("#newGridSize");
 
 newGridSize.addEventListener("click", gridSize)
+
+// Clears all created divs.
+clearButton.addEventListener("click", () => {
+    while(container.firstChild){
+        container.removeChild(container.firstChild);
+    }
+})
 // Creates rows from user input and adds to container as child element.
-function create(userInput){
+create = (userInput) => {
     for(let i = 0; i < userInput; i++){
         let row = document.createElement("div");
         container.appendChild(row);
@@ -36,19 +43,12 @@ function gridSize(){
 
 // runs through each scare and on mouseOver, change class -
 // - to colored square.
-    let paintSquares = document.querySelectorAll(".gridSquare");
+    paintSquares = document.querySelectorAll(".gridSquare");
     paintSquares.forEach(function(colorSquare){
         colorSquare.addEventListener("mouseover", () =>{
             colorSquare.classList.add("gridSquareColor");
         })
     })
 }
-
-// Clears all created divs.
-clearButton.addEventListener("click", () => {
-    while(container.firstChild){
-        container.removeChild(container.firstChild);
-    }
-})
 
 gridSize();
