@@ -1,2 +1,2 @@
 # Etch-A-Sketch
-Etch-A-Sketch Project
+Etch-A-Sketch - Draw like you used to with those old toys - https://mypaxpax.github.io/Etch-A-Sketch/
